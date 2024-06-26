@@ -1,5 +1,5 @@
 :root {
-    --radius-padrao: 10px;
+    --radius-padrao: 20px;
     --cor-fundo: white;
     --cor-destaque: black;
     --cor-texto-destaque: white;
@@ -7,6 +7,14 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--cor-destaque);
+}
+
+header {
+    background-color: var(--cor-fundo);
+    max-width: 900px;
+    padding: 20px;
+    border-radius: var(--radius-padrao);
 }
 
 header > h1 {
@@ -20,6 +28,10 @@ header > p {
 
 main {
     max-width: 900px;
+    background-color: var(--cor-fundo);
+    padding: 20px;
+    border-radius: var(--radius-padrao);
+    margin-top: 20px;
 }
 
 form fieldset {
@@ -40,24 +52,43 @@ form fieldset div{
     padding: 20px;
 }
 
+form input[type="text"], form input[type="password"], form input[type="email"], form input[type="tel"], form input[type="number"], textarea, form input[type="date"], select{
+    padding: 10px;
+    border-radius: var(--radius-padrao);
+    border: .5px solid black;
+}
+
+textarea {
+    display: block;
+    margin-top: 20px;
+}
+
+form div:has(input[type="submit"]) {
+    display: flex;
+    justify-content: space-between;
+}
+
 form input[type="submit"], form input[type="reset"] {
-    width: 200px;
-    padding: 10px 0;
+    flex-grow: 1;
+    padding: 20px 0;
     border: 0;
     border-radius: var(--radius-padrao);
     background-color: var(--cor-destaque);
     color: var(--cor-texto-destaque);
-    margin-top: 20px;
+    margin: 10px;
+    font-size: 1.5em;
 }
 
-form input[type="text"], form input[type="password"], form input[type="email"], form input[type="tel"], form input[type="number"]{
-    padding: 10px;
-    border-radius: var(--radius-padrao);
-    border: .5px solid black;
+form input[type="submit"]:hover, form input[type="reset"]:hover {
+    background-color: rgba(0, 0, 0, 0.796);
 }
  
 @media screen and (min-width: 900px){
     main {
         margin: auto;
+    }
+
+    header {
+        margin:20px auto;
     }
 }
