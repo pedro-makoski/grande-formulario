@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matricule-se</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Matricule aqui seu filho(a), <br>para o curso do <br>1 ao 1 milhão</h1>
+        <p>Coloque aqui os Dados para melhor ajudarmos o seu filho(a).</p>
+    </header>
+    <main>
+        <form action="cadastro.php" action="post" autocomplete="on">
+            <fieldset>
+                <legend>Dados do seu filho(a)</legend>
+                <div>
+                    <label for="inomecomp">Nome Completo: </label>
+                    <input type="text" name="nomecomp" id="inomecomp" size="50" required autocomplete="name">
+                </div>
+                <div>
+                    <label for="inascimento">Data de nascimento: </label>
+                    <input type="date" name="nascimento" id="inascimento" required>
+                </div>
+                <div>
+                    <label for="iest">Estado de Nascimento: </label>
+                    <select name="est" id="iest" required>
+                        <option value="" selected>--- Escolha ----</option>
+                        <optgroup label="Região Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="PA">Pará</option>
+                            <option value="RR">Roraima</option>
+                            <option value="RO">Rôndonia</option>
+                            <option value="TO">Tocântins</option>
+                        </optgroup> 
+                        <optgroup label="Região Centro Oeste">
+                            <option value="GO">Goias</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                        </optgroup>
+                        <optgroup label="Regio Sudeste">
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                        </optgroup>
+                        <optgroup label="Região Nordeste">
+                            <option value="AL">Alagoas</option>
+                            <option value="BH">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="MR">Maranhão</option>
+                            <option value="PI">Piauí</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PA">Paraiba</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="SE">Sergipe</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="icpf">CPF: </label>
+                    <input type="text" name="cpf" id="icpf" required pattern="^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$">
+                </div>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <div>
+                        <input type="radio" name="sexo" id="isexmas" value="M" checked><label for="isexmas">Masculino</label>
+                        <input type="radio" name="sexo" id="isexfem" value="F"><label for="isexfem">Feminino</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="inivelescolaridade">Qual é o nível de escolaridade de seu filho(a): </label>
+                    <select name="nivelescolaridade" id="inivelescolaridade">
+                        <option value="nan">Nenhum</option>
+                        <option value="fudamental">Fudamental</option>
+                        <option value="medio">Medio</option>
+                        <option value="Superior">Superior</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Sobre o investimento: </legend>
+                <div>
+                    <label for="iquantpag">Quanto você pode pagar para o seu filho(a) elevar de carreira em R$ - no mínimo R$ 10: </label>
+                    <input type="number" name="quantpag" id="iquantpag" min="10" max="" step="0.05" required value="1000">
+                </div>
+                <fieldset>
+                    <legend>Qual o seu filho(a) e vocês preferem: </legend>
+                    <div>
+                        <input type="radio" name="prazo" id="icurto"><label for="icurto">Investimento de Curto prazo</label>
+                        <input type="radio" name="prazo" id="ilongo" checked><label for="ilongo">Investimentos de Longo Prazo</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="isonho">Conte nos o sonho de vocês e do seu filho(a): </label>
+                    <textarea name="sonho" id="isonho" cols="30" rows="10" required></textarea>
+                </div>
+                <div>
+                    <label for="idinheironecessario">Quanto de dinheiro é necesário para fazer o sonho acontecer(R$): </label>
+                    <input type="number" name="dinheironecessario" id="idinheironecessario" required step="0.05" value="1000">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Informações pai</legend>
+                <div>
+                    <label for="paiinomecomp">Nome Completo: </label>
+                    <input type="text" name="painomecomp" id="paiinomecomp" size="50" required autocomplete="name">
+                </div>
+                <div>
+                    <label for="paiinascimento">Data de nascimento: </label>
+                    <input type="date" name="painascimento" id="paiinascimento" required>
+                </div>
+                <div>
+                    <label for="paiiest">Estado de Nascimento: </label>
+                    <select name="paiest" id="paiiest" required>
+                        <option value="" selected>--- Escolha ----</option>
+                        <optgroup label="Região Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="PA">Pará</option>
+                            <option value="RR">Roraima</option>
+                            <option value="RO">Rôndonia</option>
+                            <option value="TO">Tocântins</option>
+                        </optgroup> 
+                        <optgroup label="Região Centro Oeste">
+                            <option value="GO">Goias</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                        </optgroup>
+                        <optgroup label="Regio Sudeste">
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                        </optgroup>
+                        <optgroup label="Região Nordeste">
+                            <option value="AL">Alagoas</option>
+                            <option value="BH">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="MR">Maranhão</option>
+                            <option value="PI">Piauí</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PA">Paraiba</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="SE">Sergipe</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="paiicpf">CPF: </label>
+                    <input type="text" name="paicpf" id="paiicpf" required pattern="^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$">
+                </div>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <div>
+                        <input type="radio" name="paisexo" id="paiisexmas" value="M" checked><label for="paiisexmas">Masculino</label>
+                        <input type="radio" name="paisexo" id="paiisexfem" value="F"><label for="paiisexfem">Feminino</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="paiinivelescolaridade">Qual é o nível de escolaridade do pai: </label>
+                    <select name="painivelescolaridade" id="painivelescolaridade">
+                        <option value="nan">Nenhum</option>
+                        <option value="fudamental">Fudamental</option>
+                        <option value="medio">Medio</option>
+                        <option value="Superior">Superior</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="ipainumero">Número de Celular do Pai: </label>
+                    <input type="tel" name="painumero" id="ipainumero" required pattern="^+[0-9]{2}\([0-9]{2}\)\d{5}-\d{4}$" autocomplete="tel">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Informações mãe: </legend>
+                <div>
+                    <label for="maeinomecomp">Nome Completo: </label>
+                    <input type="text" name="maenomecomp" id="maeinomecomp" size="50" required autocomplete="name">
+                </div>
+                <div>
+                    <label for="maeinascimento">Data de nascimento: </label>
+                    <input type="date" name="maenascimento" id="maeinascimento" required>
+                </div>
+                <div>
+                    <label for="maeiest">Estado de Nascimento: </label>
+                    <select name="maeest" id="maeiest" required>
+                        <option value="" selected>--- Escolha ----</option>
+                        <optgroup label="Região Norte">
+                            <option value="AC">Acre</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="PA">Pará</option>
+                            <option value="RR">Roraima</option>
+                            <option value="RO">Rôndonia</option>
+                            <option value="TO">Tocântins</option>
+                        </optgroup> 
+                        <optgroup label="Região Centro Oeste">
+                            <option value="GO">Goias</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                        </optgroup>
+                        <optgroup label="Regio Sudeste">
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                        </optgroup>
+                        <optgroup label="Região Sul">
+                            <option value="PR">Paraná</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                        </optgroup>
+                        <optgroup label="Região Nordeste">
+                            <option value="AL">Alagoas</option>
+                            <option value="BH">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="MR">Maranhão</option>
+                            <option value="PI">Piauí</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PA">Paraiba</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="SE">Sergipe</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div>
+                    <label for="maeicpf">CPF: </label>
+                    <input type="text" name="maecpf" id="maeicpf" required pattern="^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$">
+                </div>
+                <fieldset>
+                    <legend>Sexo</legend>
+                    <div>
+                        <input type="radio" name="maesexo" id="maeisexmas" value="M" checked><label for="maeisexmas">Masculino</label>
+                        <input type="radio" name="maesexo" id="maeisexfem" value="F"><label for="maeisexfem">Feminino</label>
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="maeinivelescolaridade">Qual é o nível de escolaridade da mãe: </label>
+                    <select name="maenivelescolaridade" id="painivelescolaridade">
+                        <option value="nan">Nenhum</option>
+                        <option value="fudamental">Fudamental</option>
+                        <option value="medio">Medio</option>
+                        <option value="Superior">Superior</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="imaenumero">Número de Celular da Mãe: </label>
+                    <input type="tel" name="maenumero" id="imaenumero" required pattern="^+[0-9]{2}\([0-9]{2}\)\d{5}-\d{4}$" autocomplete="tel">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Horários disponíveis</legend>
+                <div>
+                    <input type="checkbox" name="hor1" id="ihor1"><label for="ihor1">07:15</label>
+                    <input type="checkbox" name="hor2" id="ihor2"><label for="ihor2">10:25</label>
+                    <input type="checkbox" name="hor3" id="ihor3"><label for="ihor3">13:20</label>
+                    <input type="checkbox" name="hor4" id="ihor4"><label for="ihor4">15:30</label>
+                    <input type="checkbox" name="hor5" id="ihor5"><label for="ihor5">17:50</label>
+                    <input type="checkbox" name="hor6" id="ihor6"><label for="ihor6">20:00</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Sobre o atendimento, que você já teve</legend>
+                <div>
+                    <label for="isatisfacao">Quanto você sentiu satisfeito de 0 a 10: </label>
+                    <input type="range" name="satisfacao" id="isatisfacao" min="0" max="10" value="5" oninput="isatisfacaonumero.innerHTML = isatisfacao.value">
+                    <output name="satisfacao-numero" id="isatisfacaonumero">5</output>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Dados de usuário: </legend>
+                <div>
+                    <label for="iemail">Email para mandarmos mais informações: </label>
+                    <input type="email" name="email" id="iemail" required>
+                </div>
+                <div>
+                    <label for="isenha">Crie uma senha para você, se identificar</label>
+                    <input type="password" name="senha" id="isenha" required autocomplete="new-password">
+                </div>
+            </fieldset>
+            <div>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

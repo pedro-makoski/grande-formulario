@@ -1,0 +1,63 @@
+:root {
+    --radius-padrao: 10px;
+    --cor-fundo: white;
+    --cor-destaque: black;
+    --cor-texto-destaque: white;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header > h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+header > p {
+    text-align: center;
+}
+
+main {
+    max-width: 900px;
+}
+
+form fieldset {
+    margin-top: 20px;
+    border-radius: var(--radius-padrao);
+    padding-top: 60px;
+    position: relative;
+}
+
+legend {
+    display: block;
+    position: absolute;
+    top: 20px;
+    font-size: 1.5em;
+}
+
+form fieldset div{
+    padding: 20px;
+}
+
+form input[type="submit"], form input[type="reset"] {
+    width: 200px;
+    padding: 10px 0;
+    border: 0;
+    border-radius: var(--radius-padrao);
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-destaque);
+    margin-top: 20px;
+}
+
+form input[type="text"], form input[type="password"], form input[type="email"], form input[type="tel"], form input[type="number"]{
+    padding: 10px;
+    border-radius: var(--radius-padrao);
+    border: .5px solid black;
+}
+ 
+@media screen and (min-width: 900px){
+    main {
+        margin: auto;
+    }
+}
