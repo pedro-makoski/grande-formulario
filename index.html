@@ -12,12 +12,15 @@
         <p>Coloque aqui os Dados para melhor ajudarmos o seu filho(a).</p>
     </header>
     <main>
+        <form action="cor.php">
+            <label for="icor">Coloque uma cor para ser essa a cor tema do site: </label>
+            <input type="color" name="cor" id="icor" oninput="document.documentElement.style.setProperty('--cor-destaque', icor.value)"></form>
         <form action="cadastro.php" method="post" autocomplete="on">
             <fieldset>
                 <legend>Dados do seu filho(a)</legend>
                 <div>
                     <label for="inomecomp">Nome Completo: </label>
-                    <input type="text" name="nomecomp" id="inomecomp" size="50" required autocomplete="name">
+                    <input type="text" name="nomecomp" id="inomecomp" required autocomplete="name">
                 </div>
                 <div>
                     <label for="inascimento">Data de nascimento: </label>
@@ -101,7 +104,7 @@
                 </fieldset>
                 <div>
                     <label for="isonho">Conte nos o sonho de vocês e do seu filho(a): </label>
-                    <textarea name="sonho" id="isonho" cols="30" rows="10" required></textarea>
+                    <textarea name="sonho" id="isonho" required></textarea>
                 </div>
                 <div>
                     <label for="idinheironecessario">Quanto de dinheiro é necesário para fazer o sonho acontecer(R$): </label>
@@ -265,12 +268,12 @@
             <fieldset>
                 <legend>Horários disponíveis</legend>
                 <div>
-                    <input type="checkbox" name="hor1" id="ihor1"><label for="ihor1">07:15</label>
-                    <input type="checkbox" name="hor2" id="ihor2"><label for="ihor2">10:25</label>
-                    <input type="checkbox" name="hor3" id="ihor3"><label for="ihor3">13:20</label>
-                    <input type="checkbox" name="hor4" id="ihor4"><label for="ihor4">15:30</label>
-                    <input type="checkbox" name="hor5" id="ihor5"><label for="ihor5">17:50</label>
-                    <input type="checkbox" name="hor6" id="ihor6"><label for="ihor6">20:00</label>
+                    <input type="checkbox" name="hor1" id="ihor1"><label for="ihor1" class="naoespacar">07:15</label>
+                    <input type="checkbox" name="hor2" id="ihor2"><label for="ihor2" class="naoespacar">10:25</label>
+                    <input type="checkbox" name="hor3" id="ihor3"><label for="ihor3" class="naoespacar">13:20</label>
+                    <input type="checkbox" name="hor4" id="ihor4"><label for="ihor4" class="naoespacar">15:30</label>
+                    <input type="checkbox" name="hor5" id="ihor5"><label for="ihor5" class="naoespacar">17:50</label>
+                    <input type="checkbox" name="hor6" id="ihor6"><label for="ihor6" class="naoespacar">20:00</label>
                 </div>
             </fieldset>
             <fieldset>
