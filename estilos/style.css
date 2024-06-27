@@ -199,6 +199,7 @@ form input[type="submit"], form input[type="reset"] {
     color: var(--cor-texto-destaque);
     margin: 10px;
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 form input[type="submit"]:hover, form input[type="reset"]:hover {
